@@ -1,0 +1,45 @@
+﻿  Enermy.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Enermy.cpp(135,30): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+  Game.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.h(34,24): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(211,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(212,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(215,16): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(216,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(217,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(218,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(226,28): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(437,24): warning C4244: “初始化”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(475,107): warning C4305: “参数”: 从“double”到“T”截断
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(584,20): warning C4018: “<”: 有符号/无符号不匹配
+  Object.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Object.cpp(197,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Object.cpp(215,18): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+  ParticleSystem.cpp
+  Raytest.cpp
+  Skybox.cpp
+  Terrain.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Terrain.cpp(168,55): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Terrain.cpp(168,52): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Terrain.cpp(343,18): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Terrain.cpp(504,20): warning C4018: “<”: 有符号/无符号不匹配
+  Texture.cpp
+  Weapon.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(20,21): warning C4305: “=”: 从“double”到“float”截断
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(24,21): warning C4305: “=”: 从“double”到“float”截断
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(81,12): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(84,17): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(96,12): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(99,17): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(232,31): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+  main.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.h(34,24): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  正在生成代码...
+  MyOpenGLGame.vcxproj -> C:\Users\Administrator\source\repos\MyOpenGLGame\Debug\MyOpenGLGame.exe
