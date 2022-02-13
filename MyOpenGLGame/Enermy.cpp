@@ -192,7 +192,7 @@ void Enermy::Attack(Player* player, const float dt, float PlayerDistance)
 }
 
 //if enemy get hit ,go back away
-// accroding to player's weapon , close fight make the enemy go back away more
+// accroding to player's weapon , close fight make the enemy go more back away 
 void Enermy::BackAway(Camera& target, const float dt,int mod)
 {
 	//std::cout << mod;
