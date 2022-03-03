@@ -441,7 +441,7 @@ void Game::Gameloop()
 		//std::cout << deltaTime << std::endl;
 
 		i++;
-		if (i == 4000) {
+		if (i == 1500) {
 			EnemyBorn(1);
 			i = 0;
 		}

@@ -1,36 +1,55 @@
-﻿  Terrain.cpp
+﻿  Camera.cpp
+  Enermy.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Enermy.cpp(135,30): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+  Game.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.h(34,24): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(211,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(212,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(215,16): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(216,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(217,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(218,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(226,28): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(437,24): warning C4244: “初始化”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(475,107): warning C4305: “参数”: 从“double”到“T”截断
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(584,20): warning C4018: “<”: 有符号/无符号不匹配
+  LightDirectional.cpp
+  LightSpot.cpp
+  main.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.h(34,24): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  Mesh.cpp
+  Model.cpp
+  Object.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Object.cpp(197,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Object.cpp(215,18): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+  Particle.cpp
+  ParticleSystem.cpp
+  Player.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Player.cpp(46,31): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+  RandomNum.cpp
+  Raytest.cpp
+  Shader.cpp
+  Skybox.cpp
+  Terrain.cpp
 C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Terrain.cpp(168,55): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
 C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Terrain.cpp(168,52): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
 C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Terrain.cpp(343,18): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
 C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Terrain.cpp(504,20): warning C4018: “<”: 有符号/无符号不匹配
-LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
-  正在生成代码
-  3 of 1357 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    13 functions had inline decision re-evaluated but remain unchanged
-  已完成代码的生成
-LINK : warning LNK4286: 符号“___glewGenBuffers”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
-LINK : warning LNK4286: 符号“___glewGenVertexArrays”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
-LINK : warning LNK4286: 符号“___glewActiveTexture”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
-LINK : warning LNK4286: 符号“___glewBufferData”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
-LINK : warning LNK4286: 符号“___glewBindBuffer”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
-LINK : warning LNK4286: 符号“___glewVertexAttribPointer”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
-LINK : warning LNK4286: 符号“___glewBindVertexArray”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
-LINK : warning LNK4286: 符号“___glewEnableVertexAttribArray”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
-LINK : warning LNK4286: 符号“___glewGenerateMipmap”(在“glew32s.lib(glew.obj)”中定义)已由“Model.obj”导入
-LINK : warning LNK4286: 符号“___glewDrawArraysInstanced”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewVertexAttribDivisor”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewDeleteBuffers”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewDeleteVertexArrays”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewDrawElementsInstanced”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4286: 符号“___glewGenRenderbuffers”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-LINK : warning LNK4286: 符号“___glewBindFramebuffer”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-LINK : warning LNK4286: 符号“___glewBindRenderbuffer”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-LINK : warning LNK4286: 符号“___glewGenFramebuffers”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-LINK : warning LNK4286: 符号“___glewFramebufferRenderbuffer”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-LINK : warning LNK4286: 符号“___glewDeleteFramebuffers”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-LINK : warning LNK4286: 符号“___glewDeleteRenderbuffers”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-LINK : warning LNK4286: 符号“___glewRenderbufferStorage”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-LINK : warning LNK4286: 符号“___glewFramebufferTexture”(在“glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”导入
-glew32s.lib(glew.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“glew32s.lib(glew.obj)”或在“C:\Users\Administrator\source\repos\MyOpenGLGame\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-  MyOpenGLGame.vcxproj -> C:\Users\Administrator\source\repos\MyOpenGLGame\Release\MyOpenGLGame.exe
+  Texture.cpp
+  WaterFrameBuffer.cpp
+  Weapon.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(20,21): warning C4305: “=”: 从“double”到“float”截断
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(24,21): warning C4305: “=”: 从“double”到“float”截断
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(81,12): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(84,17): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(96,12): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(99,17): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.cpp(232,31): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+LINK : fatal error LNK1181: 无法打开输入文件“glfw3.lib”

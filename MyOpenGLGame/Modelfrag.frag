@@ -79,7 +79,6 @@ vec3 calculateLightDirectional(LightDirectional light,vec3 uNormal,vec3 dirToCam
 	return result;
 }
 
-
 vec3 calculateLightPoint(LightPoint light,vec3 uNormal,vec3 dirToCamera){
 	vec3 result ;
 	//attenuation
