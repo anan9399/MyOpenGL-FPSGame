@@ -8,13 +8,14 @@
 class Shader {
 public:
 	unsigned int ID;
-	Shader(const char* vertexPath, const char* fragmentPath);
+	Shader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr);
 	~Shader();
 	std::string vertexString;
 	std::string fragmentString;
+	std::string geometryString;
 	const char* vertexSource;
 	const char* fragmentSource;
-
+	const char* geometrySource;
 	enum Slot
 	{
 		DIFFUSE,
