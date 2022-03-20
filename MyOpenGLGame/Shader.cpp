@@ -25,7 +25,7 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath, const char* geo
 	fragmentFile.open(fragmentPath);
 	vertexFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
 	fragmentFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-
+ 
 	try
 	{
 		if (!vertexFile.is_open() || !fragmentFile.is_open())
