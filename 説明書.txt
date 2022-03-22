@@ -1,3 +1,11 @@
+制作期間
+1ヶ月
+
+制作環境
+ツール:Visual Stdio  
+プログラミング言語: C ++ 
+ライブラリ:OpenGL assimp 
+
 ゲーム操作:
 WASD :移動　SPACE:ジャンプ　F:トーチを点灯する/消す MOUSE LEFT:  発砲する 
 R: リロード　num1:小銃に切り替える　num2:狙撃銃に切り替える　num3:拳に切り替える
