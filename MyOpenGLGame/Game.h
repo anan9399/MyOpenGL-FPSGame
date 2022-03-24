@@ -25,6 +25,10 @@
 #include "ParticleSystem.h"
 #include"Weapon.h"
 
+#define win 1
+#define lose 2
+
+
 class Game
 {
 
