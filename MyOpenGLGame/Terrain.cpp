@@ -244,13 +244,11 @@ Terrain::Terrain()
 }
 
 void Terrain::InitWater()
-//水面顶点数组及索引计算
+
 {
 
-	//pool.obj中的坐标轴与数学上的三维空间坐标轴不同，Y轴是在竖直方向，Z轴是在水平方向,为了与模型把持一致，我们以下的顶点数组中采用这种坐标系
-	//坐标范围是X轴(-3,3),Z轴(-3,3)
 	float valueX = 153;
-	float valueZ = 462;	//以上两个参数是为了顶点数组从水池左上角开始计算水面顶点数组，这样比较符合日常直觉
+	float valueZ = 462;	
 	int range = 60;
 	int size = 3;
 
