@@ -1,3 +1,7 @@
+
+作品名 
+3D-FPSGAME
+
 制作期間
 1ヶ月
 
@@ -5,6 +9,10 @@
 ツール:Visual Stdio  
 プログラミング言語: C ++ 
 ライブラリ:OpenGL assimp 
+
+制作人数
+1人
+
 
 ゲーム操作:
 WASD :移動　SPACE:ジャンプ　F:トーチを点灯する/消す MOUSE LEFT:  発砲する 
