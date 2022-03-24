@@ -46,7 +46,7 @@ private:
 	glm::mat4 model;
 	glm::mat4 view;
 	glm::mat4 projection;
-	void fire(const float dt);
+	void fire(const float dt, Player* player);
 	void Seek(Camera& target, const float dt);
 	void Attack(Player* player, const float dt,float PlayerDistance);
 	void BackAway(Camera& target, const float dt, int mod=1);
