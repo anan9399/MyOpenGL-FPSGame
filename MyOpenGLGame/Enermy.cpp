@@ -28,48 +28,6 @@ Enermy::Enermy( bool live)
 
 }
 
-//void Enermy::DrawEnermy(Camera camera,LightDirectional *lightD,LightSpot *lightS,int FlashOn)
-//{
-//
-//	model = glm::mat4(1.0f);
-//	enermyShader->use();
-//	view = camera.GetViewMatrix();
-//	projection = glm::perspective(glm::radians(camera.Zoom), 800.0f / 600.0f, 0.1f, 300.0f);
-//	model = glm::translate(model, this->Position);
-//	glm::vec3 desiredVelocity = camera.Position - Position;
-//	//model = glm::rotate(model, (float)10.0f, glm::vec3(0, 1.0f, 0));
-//	enermyShader->setUniform4m("modelMat", model);
-//	enermyShader->setUniform4m("viewMat", view);
-//	enermyShader->setUniform4m("projectMat", projection);
-//
-//	enermyShader->setUniform3f("lightD.pos", lightD->Position);
-//	enermyShader->setUniform3f("lightD.color", lightD->Color);
-//	enermyShader->setUniform3f("lightD.dirToLight", lightD->Direction);
-//
-//	enermyShader->setUniform3f("lightS.pos", camera.Position);
-//	enermyShader->setUniform3f("lightS.color", lightS->Color);
-//	enermyShader->setUniform3f("lightS.dirToLight", lightS->Direction);
-//	enermyShader->setUniform1f("lightS.cosPhyInner", lightS->cosPhyInner);
-//	enermyShader->setUniform1f("lightS.cosPhyOutter", lightS->cosPhyOutter);
-//
-//
-//	enermyShader->setUniform3f("cameraPos", camera.Position);
-//
-//	//Set Meterial -> Testure
-//	enermyShader->setUniform3f("material.ambient", glm::vec3(1.0f, 1.0f, 1.0f));
-//	enermyShader->setUniform1i("material.diffuse", 0);
-//	enermyShader->setUniform1i("material.specular", 1);
-//	//myMaterial->shader->setUniform1i("material.emission", Shader::EMISSION);
-//	enermyShader->setUniform1f("material.shininess", 64.0f);
-//	enermyShader->setUniform1i("FlashOn", FlashOn);
-//	if (beAttack) {
-//		enermyShader->setUniform1i("Hurt", 1);
-//	}
-//
-//
-//	enermyModel->Draw(enermyShader);
-//}
-
 void Enermy::ActiveEnermy(glm::vec3& Pos)
 {
 	Position = Pos;
@@ -148,10 +106,11 @@ void Enermy::Update(Camera camera, LightDirectional* lightD, LightSpot* lightS, 
 }
 
 
-
-void Enermy::fire(const float dt)
+void Enermy::fire(const float dt,Player *player)
 {
 	std::cout << "enermy fire!" << std::endl;
+	std::cout << "hp: " << player->hp << std::endl;
+	player->beAttack(5);
 	canAttack = false;
 }
 
