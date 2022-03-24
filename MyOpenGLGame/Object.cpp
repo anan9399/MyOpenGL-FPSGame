@@ -91,6 +91,18 @@ float ScreenVertices[] = {
 	 0.045f,  0.05f,  1.0f, 1.0f
 };
 
+float FullScreenVertices[] = {
+	// positions   // texCoords
+          -1.0f,  1.0f,  0.0f, 1.0f,
+	  -1.0f, -1.0f,  0.0f, 0.0f,
+	   1.0f, -1.0f,  1.0f, 0.0f,
+
+	  -1.0f,  1.0f,  0.0f, 1.0f,
+	   1.0f, -1.0f,  1.0f, 0.0f,
+	   1.0f,  1.0f,  1.0f, 1.0f
+};
+
+
 glm::mat4 modelMat;
 glm::mat4 viewMat;
 glm::mat4 projectionMat;
@@ -172,6 +184,25 @@ void Object::InitObject()
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
 
 	AimTex = Texture::GetInstance().loadTextureBySlot("crossHair.png", GL_RGBA, GL_RGBA, 0);
+	
+	
+#pragma region End
+	FullScreenShader = new Shader("ScreenVert.vert", "ScreenFrag.frag");
+	glGenVertexArrays(1, &FullScreenVAO);
+	glBindVertexArray(FullScreenVAO);
+	glGenBuffers(1, &FullScreenVBO);
+	glBindBuffer(GL_ARRAY_BUFFER, FullScreenVBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(FullScreenVertices), &FullScreenVertices, GL_STATIC_DRAW);
+
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(1);
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
+
+	winTex = Texture::GetInstance().loadTextureBySlot("wins.png", GL_RGBA, GL_RGBA, 0);
+	loseTex = Texture::GetInstance().loadTextureBySlot("lose.png", GL_RGBA, GL_RGBA, 0);
+
+#pragma endregion
 	
 }
 
@@ -429,4 +460,28 @@ void Object::DrawCrosshair()
 	glDrawArrays(GL_TRIANGLES, 0, 6);
 	ScreenShader->stop();
 }
+
+
+void Object::DrawEnd(int end)
+{
+	if (end == 0){
+		return;
+		}
+	FullScreenShader->use();
+	glBindVertexArray(FullScreenVAO);
+	glActiveTexture(GL_TEXTURE0);
+	if(end==1)
+	{
+		glBindTexture(GL_TEXTURE_2D, winTex);
+	}
+	else 
+	{
+		glBindTexture(GL_TEXTURE_2D, loseTex);
+	} 
+	
+	FullScreenShader->setUniform1i("screenTexture", 0);
+	glDrawArrays(GL_TRIANGLES, 0, 6);
+	FullScreenShader->stop();
+}
+
 
