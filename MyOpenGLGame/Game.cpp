@@ -441,7 +441,7 @@ void Game::Gameloop()
 		//std::cout << deltaTime << std::endl;
 
 		i++;
-		if (i == 1500) {
+		if (i == 800) {
 			EnemyBorn(1);
 			i = 0;
 		}
@@ -515,6 +515,15 @@ void Game::Gameloop()
 		}
 		weapon->Upload(camera, enermies, raytest, mouse_button, deltaTime);
 	
+		//hp <= 0 player lose
+		if (player->hp <= 0) {
+			object->DrawEnd(lose);
+		}
+	       // defeat 20 enems player win
+		if (DeadEnermies.size()>=20) {
+			object->DrawEnd(win);
+		}
+		
 		//AttackUpdate(player);
 		processInput(window, deltaTime);
 		
