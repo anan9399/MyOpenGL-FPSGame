@@ -22,16 +22,22 @@ public:
 	void DrawPlant(Camera& camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn, std::vector<glm::vec3>plantPos);
 	void DrawWater(Camera& camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn,int reflect);
 	void DrawCrosshair();
+	void DrawEnd(int end = 0);
+
 private:
 	unsigned int VAO, VBO;
 	unsigned int PlantVAO, PlantVBO, PlantInsVBO;
 	unsigned int WaterVAO, WaterVBO;
 	unsigned int ScreenVAO, ScreenVBO;
+	unsigned int FullScreenVAO, FullScreenVBO;
+
 
 	Shader* m_shader;
 	Shader* plant_shader;
 	Shader* water_shader;
 	Shader* ScreenShader;
+	Shader* FullScreenShader;
+
 	LightDirectional *m_lightD;
 	//Terrain* terrain;
 	//LightPoint* m_lightP;
@@ -41,6 +47,8 @@ private:
 	int plantTex;
 	int waterTex;
 	int AimTex;
+	int winTex, loseTex;
+
 	//std::vector<Tree> trees;
 
 	std::vector<glm::mat4> GrassModel;
