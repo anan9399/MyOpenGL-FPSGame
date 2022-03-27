@@ -55,9 +55,9 @@ std::vector<glm::vec3> treeScale {
 };
 
 std::vector<glm::vec3> enermyPos{
-	glm::vec3(350.0f, 13.0f, 350.0),
+	glm::vec3(372.2f,17.1f,453.9f),
 	glm::vec3(234.508f, 35.8568f, 226.0f),
-	glm::vec3(351.0f, 13.0f, 355.0),
+	glm::vec3(547.2f,9.0f,264.4f),
 	glm::vec3(0)
 
 };
@@ -551,7 +551,8 @@ void Game::EnemyBorn(int n)
 {
 	int i = 0;
 	while (i < n && CurrentEnermyNum < TotalEnermyNum) {
-		enermies[CurrentEnermyNum]->ActiveEnermy(enermyPos[1]);
+		int pos = i % 3;
+		enermies[CurrentEnermyNum]->ActiveEnermy(enermyPos[i]);
 		CurrentEnermyNum++;
 		i++;
 	}
