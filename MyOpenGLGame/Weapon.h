@@ -1,6 +1,7 @@
 #pragma once
 #include"Player.h"
 #include"Raytest.h"
+#include<irrKlang.h>
 
 class Weapon
 {
@@ -8,7 +9,7 @@ public:
 	Weapon(Player* player);
 	int GetWeapon() { return WeaponMod; };
 	float GetAmo() { return amo; };
-	void Upload(Camera camera, std::vector<Enermy*>enermies, Raytest * raytest,bool mouse_button,float dt);
+	void Upload(Camera camera, std::vector<Enermy*>enermies, irrklang::ISoundEngine* SoundEngine,Raytest* raytest, bool mouse_button, float dt);
 
 	void AmoCheck();
 	bool SwitchWeapon(Player* player, int mod, bool WeaponSwitching,float dt);
@@ -31,7 +32,8 @@ private:
 	bool QuickReloadMod;
 	int diffuse, specular;
 	float offset, offsetRange,offsetValue,Zoffset, ZoffsetRange, ZoffsetValue ;
-	
+
+
 
 	glm::mat4 modelMat;
 	glm::mat4 viewMat;

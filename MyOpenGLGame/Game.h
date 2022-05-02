@@ -9,6 +9,7 @@
 #include <iostream>
 #include <vector>
 #include <stdio.h>
+#include <irrKlang.h>
 
 #include "LightDirectional.h"
 #include "LightSpot.h"
@@ -25,9 +26,9 @@
 #include "ParticleSystem.h"
 #include"Weapon.h"
 
+
 #define win 1
 #define lose 2
-
 
 class Game
 {
@@ -57,6 +58,8 @@ private:
 	int TotalEnermyNum, CurrentEnermyNum;
 	bool WeaponSwitch = false,move=false;
 	int WeaponMod=1;
+	irrklang::ISoundEngine* SoundEngine = irrklang::createIrrKlangDevice();
+
 
 	std::string exePath;
 	GLFWwindow* window;

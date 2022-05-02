@@ -93,7 +93,7 @@ float ScreenVertices[] = {
 
 float FullScreenVertices[] = {
 	// positions   // texCoords
-          -1.0f,  1.0f,  0.0f, 1.0f,
+      -1.0f,  1.0f,  0.0f, 1.0f,
 	  -1.0f, -1.0f,  0.0f, 0.0f,
 	   1.0f, -1.0f,  1.0f, 0.0f,
 
@@ -171,6 +171,7 @@ void Object::InitObject()
 
 #pragma endregion
 
+#pragma region crossHair
 	ScreenShader = new Shader("ScreenVert.vert", "ScreenFrag.frag");
 	glGenVertexArrays(1, &ScreenVAO);
 	glBindVertexArray(ScreenVAO);
@@ -184,8 +185,9 @@ void Object::InitObject()
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
 
 	AimTex = Texture::GetInstance().loadTextureBySlot("crossHair.png", GL_RGBA, GL_RGBA, 0);
-	
-	
+
+#pragma endregion
+
 #pragma region End
 	FullScreenShader = new Shader("ScreenVert.vert", "ScreenFrag.frag");
 	glGenVertexArrays(1, &FullScreenVAO);
@@ -203,7 +205,7 @@ void Object::InitObject()
 	loseTex = Texture::GetInstance().loadTextureBySlot("lose.png", GL_RGBA, GL_RGBA, 0);
 
 #pragma endregion
-	
+
 }
 
 //void Object::InitTree(std::vector<glm::vec3> Vertices)
@@ -298,7 +300,7 @@ void Object::InitGrass(std::vector<glm::vec3> GrassPos)
 #pragma endregion
 }
 
-void Object::Drawcube(Camera& camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn)
+void Object::Drawcube(Camera& camera, const LightDirectional* lightD, const LightSpot* lightS, int FlashOn)
 {
 	glBindVertexArray(VAO);
 	
@@ -358,7 +360,7 @@ void Object::Drawcube(Camera& camera, LightDirectional* lightD, LightSpot* light
 	m_shader->stop();
 }
 
-void Object::DrawPlant(Camera& camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn, std::vector<glm::vec3>plantPos)
+void Object::DrawPlant(Camera& camera, const LightDirectional* lightD, const LightSpot* lightS, int FlashOn, std::vector<glm::vec3>plantPos)
 {
 
 	glBindVertexArray(PlantVAO);
@@ -399,7 +401,7 @@ void Object::DrawPlant(Camera& camera, LightDirectional* lightD, LightSpot* ligh
 	//}
 }
 
-void Object::DrawWater(Camera& camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn,int reflect)
+void Object::DrawWater(Camera& camera, const LightDirectional* lightD, const LightSpot* lightS, int FlashOn,int reflect)
 {
 	glBindVertexArray(WaterVAO);
 
@@ -461,7 +463,6 @@ void Object::DrawCrosshair()
 	ScreenShader->stop();
 }
 
-
 void Object::DrawEnd(int end)
 {
 	if (end == 0){
@@ -483,5 +484,4 @@ void Object::DrawEnd(int end)
 	glDrawArrays(GL_TRIANGLES, 0, 6);
 	FullScreenShader->stop();
 }
-
 

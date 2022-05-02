@@ -80,6 +80,7 @@ void Player::CloseFight()
 
 //Switching weapons
 //different weapon has own data
+//did not be used
 void Player::SwitchWeapon(int n)
 {
 	WeaponSwitching = true;
