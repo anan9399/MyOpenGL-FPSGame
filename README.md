@@ -5,6 +5,8 @@ The main game loop is in MyOpenGLGame/Game.cpp
 
 Japanese explaination is in 説明書.txt
 
+5/2 add sound effect
+
 3/24 add the game end
 
 3/24 repair a bug that elite enemy can not hurt player
