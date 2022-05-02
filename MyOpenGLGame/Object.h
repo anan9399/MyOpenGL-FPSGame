@@ -7,9 +7,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
-//#include"Terrain.h"
-//#include"Game.h"
-//#include"Tree.h"
+
 
 
 class Object
@@ -18,9 +16,9 @@ public:
 	void InitObject();
 	
 	void InitGrass(std::vector<glm::vec3>GrassPos);
-	void Drawcube(Camera &camera,LightDirectional *lightD,LightSpot *lightS,int FlashOn);
-	void DrawPlant(Camera& camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn, std::vector<glm::vec3>plantPos);
-	void DrawWater(Camera& camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn,int reflect);
+	void Drawcube(Camera &camera, const LightDirectional *lightD, const LightSpot *lightS,int FlashOn);
+	void DrawPlant( Camera& camera, const LightDirectional* lightD, const LightSpot* lightS, int FlashOn, std::vector<glm::vec3>plantPos);
+	void DrawWater(Camera& camera, const LightDirectional* lightD, const LightSpot* lightS, int FlashOn,int reflect);
 	void DrawCrosshair();
 	void DrawEnd(int end = 0);
 

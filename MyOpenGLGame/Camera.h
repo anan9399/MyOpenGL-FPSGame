@@ -22,7 +22,7 @@ public:
 	float SpeedX=0,SpeedY=0,SpeedZ=0;
 	bool isJump = false, inAir = false;
 	float upwardSpeed = 0.0f;
-	glm::mat4 GetViewMatrix();
+    glm::mat4 GetViewMatrix();
 	void ProcessMouseMovement(float deltaX,float deltaY);
 	void UpdateCameraPos(float nowy, float dt);
 	void MoveForward(float dt);

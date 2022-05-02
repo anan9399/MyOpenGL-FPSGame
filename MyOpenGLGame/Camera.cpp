@@ -38,7 +38,7 @@ void Camera::UpdateCameraVectors() {
 }
 
 void Camera::UpdateCameraPos(float nowy,float dt) {
-	tHeight = nowy;
+	//tHeight = nowy;
 	if (abs(shock + shock_step) > 0.2)
 		shock_step = -shock_step;
 	shock += shock_step;

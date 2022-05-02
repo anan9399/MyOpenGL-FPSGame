@@ -1,6 +1,7 @@
 #pragma once
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include<irrKlang.h>
 #include "Enermy.h"
 
 class Ray {
@@ -13,7 +14,7 @@ class Raytest
 public:
 	Raytest();
 	bool castRay;
-	void Update(Camera& camera, float dt, std::vector<Enermy*> enermies, int mod);
+	void Update(Camera& camera, float dt, std::vector<Enermy*> enermies, int mod, irrklang::ISoundEngine* SoundEngine);
 	void HitEnermy(Enermy* enermy);
 	Ray CastRayFromCamera(Camera& camera);
 	void CastRay();
@@ -21,6 +22,7 @@ public:
 private:
 	bool RayHit;
 	Ray PlayerRay; 
+	
 	void CheckRaySphereCollision(Camera& camera, std::vector<Enermy*> enermies);
 	bool RaySphere(Camera& camera, glm::vec3 RayDirWorld, double SphereRadius,glm::vec3 pos);
 };

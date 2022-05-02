@@ -1,118 +1,18 @@
-﻿  Camera.cpp
-  Enermy.cpp
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Enermy.cpp(135,30): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
-  Game.cpp
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.h(34,24): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(211,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(212,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(215,16): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(216,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(217,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(218,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(226,28): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(437,24): warning C4244: “初始化”: 从“double”转换到“GLfloat”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(475,107): warning C4305: “参数”: 从“double”到“T”截断
+﻿  Game.cpp
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Weapon.h(11,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.h(39,24): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(211,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(212,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(215,16): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(216,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(217,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(218,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(226,28): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(438,24): warning C4244: “初始化”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(477,107): warning C4305: “参数”: 从“double”到“T”截断
           with
           [
               T=float
           ]
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.cpp(584,20): warning C4018: “<”: 有符号/无符号不匹配
-  LightDirectional.cpp
-  LightSpot.cpp
-  main.cpp
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Game.h(34,24): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-  Mesh.cpp
-  Model.cpp
-  Object.cpp
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Object.cpp(197,20): warning C4018: “<”: 有符号/无符号不匹配
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Object.cpp(215,18): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
-  Particle.cpp
-  ParticleSystem.cpp
-  Player.cpp
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Player.cpp(46,31): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
-  RandomNum.cpp
-  Raytest.cpp
-  Shader.cpp
-  Skybox.cpp
-  Terrain.cpp
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Terrain.cpp(168,55): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Terrain.cpp(168,52): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Terrain.cpp(343,18): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Terrain.cpp(504,20): warning C4018: “<”: 有符号/无符号不匹配
-  Texture.cpp
-  WaterFrameBuffer.cpp
-  Weapon.cpp
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.h(10,26): warning C4244: “return”: 从“int”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.cpp(20,21): warning C4305: “=”: 从“double”到“float”截断
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.cpp(24,21): warning C4305: “=”: 从“double”到“float”截断
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.cpp(81,12): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.cpp(84,17): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.cpp(96,12): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.cpp(99,17): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
-C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\MyOpenGLGame\Weapon.cpp(232,31): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
-  正在生成代码...
-LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
-LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
-LINK : warning LNK4286: 符号“___glewActiveTexture”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4286: 符号“___glewActiveTexture”(在“glew32s.lib(glew.obj)”中定义)已由“Texture.obj”导入
-LINK : warning LNK4217: 符号“___glewActiveTexture”(在“ glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”(函数“"public: void __thiscall Mesh::Draw(class Shader *)" (?Draw@Mesh@@QAEXPAVShader@@@Z)”中)导入
-LINK : warning LNK4286: 符号“___glewActiveTexture”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewActiveTexture”(在“glew32s.lib(glew.obj)”中定义)已由“ParticleSystem.obj”导入
-LINK : warning LNK4286: 符号“___glewActiveTexture”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewBindBuffer”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4217: 符号“___glewBindBuffer”(在“ glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”(函数“"private: void __thiscall Mesh::SetUpMesh(void)" (?SetUpMesh@Mesh@@AAEXXZ)”中)导入
-LINK : warning LNK4286: 符号“___glewBindBuffer”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewBindBuffer”(在“glew32s.lib(glew.obj)”中定义)已由“ParticleSystem.obj”导入
-LINK : warning LNK4286: 符号“___glewBindBuffer”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewBufferData”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4217: 符号“___glewBufferData”(在“ glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”(函数“"private: void __thiscall Mesh::SetUpMesh(void)" (?SetUpMesh@Mesh@@AAEXXZ)”中)导入
-LINK : warning LNK4286: 符号“___glewBufferData”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewBufferData”(在“glew32s.lib(glew.obj)”中定义)已由“ParticleSystem.obj”导入
-LINK : warning LNK4286: 符号“___glewBufferData”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewGenBuffers”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4217: 符号“___glewGenBuffers”(在“ glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”(函数“"private: void __thiscall Mesh::SetUpMesh(void)" (?SetUpMesh@Mesh@@AAEXXZ)”中)导入
-LINK : warning LNK4286: 符号“___glewGenBuffers”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewGenBuffers”(在“glew32s.lib(glew.obj)”中定义)已由“ParticleSystem.obj”导入
-LINK : warning LNK4286: 符号“___glewGenBuffers”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewEnableVertexAttribArray”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4217: 符号“___glewEnableVertexAttribArray”(在“ glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”(函数“"private: void __thiscall Mesh::SetUpMesh(void)" (?SetUpMesh@Mesh@@AAEXXZ)”中)导入
-LINK : warning LNK4286: 符号“___glewEnableVertexAttribArray”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewEnableVertexAttribArray”(在“glew32s.lib(glew.obj)”中定义)已由“ParticleSystem.obj”导入
-LINK : warning LNK4286: 符号“___glewEnableVertexAttribArray”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewVertexAttribPointer”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4217: 符号“___glewVertexAttribPointer”(在“ glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”(函数“"private: void __thiscall Mesh::SetUpMesh(void)" (?SetUpMesh@Mesh@@AAEXXZ)”中)导入
-LINK : warning LNK4286: 符号“___glewVertexAttribPointer”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewVertexAttribPointer”(在“glew32s.lib(glew.obj)”中定义)已由“ParticleSystem.obj”导入
-LINK : warning LNK4286: 符号“___glewVertexAttribPointer”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewBindVertexArray”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4286: 符号“___glewBindVertexArray”(在“glew32s.lib(glew.obj)”中定义)已由“Weapon.obj”导入
-LINK : warning LNK4217: 符号“___glewBindVertexArray”(在“ glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”(函数“"public: void __thiscall Mesh::Draw(class Shader *)" (?Draw@Mesh@@QAEXPAVShader@@@Z)”中)导入
-LINK : warning LNK4286: 符号“___glewBindVertexArray”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewBindVertexArray”(在“glew32s.lib(glew.obj)”中定义)已由“ParticleSystem.obj”导入
-LINK : warning LNK4286: 符号“___glewBindVertexArray”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4286: 符号“___glewGenVertexArrays”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4217: 符号“___glewGenVertexArrays”(在“ glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”(函数“"private: void __thiscall Mesh::SetUpMesh(void)" (?SetUpMesh@Mesh@@AAEXXZ)”中)导入
-LINK : warning LNK4286: 符号“___glewGenVertexArrays”(在“glew32s.lib(glew.obj)”中定义)已由“Object.obj”导入
-LINK : warning LNK4286: 符号“___glewGenVertexArrays”(在“glew32s.lib(glew.obj)”中定义)已由“ParticleSystem.obj”导入
-LINK : warning LNK4286: 符号“___glewGenVertexArrays”(在“glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”导入
-LINK : warning LNK4217: 符号“___glewGenerateMipmap”(在“ glew32s.lib(glew.obj)”中定义)已由“Model.obj”(函数“"unsigned int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?TextureFromFile@@YAIPBDABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)”中)导入
-LINK : warning LNK4286: 符号“___glewGenerateMipmap”(在“glew32s.lib(glew.obj)”中定义)已由“Texture.obj”导入
-LINK : warning LNK4217: 符号“___glewDrawArraysInstanced”(在“ glew32s.lib(glew.obj)”中定义)已由“Object.obj”(函数“"public: void __thiscall Object::DrawPlant(class Camera &,class LightDirectional *,class LightSpot *,int,class std::vector<struct glm::tvec3<float,0>,class std::allocator<struct glm::tvec3<float,0> > >)" (?DrawPlant@Object@@QAEXAAVCamera@@PAVLightDirectional@@PAVLightSpot@@HV?$vector@U?$tvec3@M$0A@@glm@@V?$allocator@U?$tvec3@M$0A@@glm@@@std@@@std@@@Z)”中)导入
-LINK : warning LNK4217: 符号“___glewVertexAttribDivisor”(在“ glew32s.lib(glew.obj)”中定义)已由“Object.obj”(函数“"public: void __thiscall Object::InitGrass(class std::vector<struct glm::tvec3<float,0>,class std::allocator<struct glm::tvec3<float,0> > >)" (?InitGrass@Object@@QAEXV?$vector@U?$tvec3@M$0A@@glm@@V?$allocator@U?$tvec3@M$0A@@glm@@@std@@@std@@@Z)”中)导入
-LINK : warning LNK4286: 符号“___glewVertexAttribDivisor”(在“glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”导入
-LINK : warning LNK4217: 符号“___glewDeleteBuffers”(在“ glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”(函数“"public: __thiscall Skybox::~Skybox(void)" (??1Skybox@@QAE@XZ)”中)导入
-LINK : warning LNK4217: 符号“___glewDeleteVertexArrays”(在“ glew32s.lib(glew.obj)”中定义)已由“Skybox.obj”(函数“"public: __thiscall Skybox::~Skybox(void)" (??1Skybox@@QAE@XZ)”中)导入
-LINK : warning LNK4217: 符号“___glewDrawElementsInstanced”(在“ glew32s.lib(glew.obj)”中定义)已由“Terrain.obj”(函数“"private: void __thiscall Terrain::DrawStone(class Camera,class LightDirectional *,class LightSpot *,int)" (?DrawStone@Terrain@@AAEXVCamera@@PAVLightDirectional@@PAVLightSpot@@H@Z)”中)导入
-LINK : warning LNK4217: 符号“___glewFramebufferTexture”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"private: unsigned int __thiscall WaterFrameBuffer::CreateDepthTextureAttachment(int,int)" (?CreateDepthTextureAttachment@WaterFrameBuffer@@AAEIHH@Z)”中)导入
-LINK : warning LNK4217: 符号“___glewBindFramebuffer”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"private: void __thiscall WaterFrameBuffer::BindFrameBuffer(int,int,int)" (?BindFrameBuffer@WaterFrameBuffer@@AAEXHHH@Z)”中)导入
-LINK : warning LNK4217: 符号“___glewBindRenderbuffer”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"private: unsigned int __thiscall WaterFrameBuffer::CreateDepthBufferAttachment(int,int)" (?CreateDepthBufferAttachment@WaterFrameBuffer@@AAEIHH@Z)”中)导入
-LINK : warning LNK4217: 符号“___glewDeleteFramebuffers”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"public: void __thiscall WaterFrameBuffer::cleanUp(void)" (?cleanUp@WaterFrameBuffer@@QAEXXZ)”中)导入
-LINK : warning LNK4217: 符号“___glewDeleteRenderbuffers”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"public: void __thiscall WaterFrameBuffer::cleanUp(void)" (?cleanUp@WaterFrameBuffer@@QAEXXZ)”中)导入
-LINK : warning LNK4217: 符号“___glewFramebufferRenderbuffer”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"private: unsigned int __thiscall WaterFrameBuffer::CreateDepthBufferAttachment(int,int)" (?CreateDepthBufferAttachment@WaterFrameBuffer@@AAEIHH@Z)”中)导入
-LINK : warning LNK4217: 符号“___glewGenFramebuffers”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"private: unsigned int __thiscall WaterFrameBuffer::CreateFrameBuffer(void)" (?CreateFrameBuffer@WaterFrameBuffer@@AAEIXZ)”中)导入
-LINK : warning LNK4217: 符号“___glewGenRenderbuffers”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"private: unsigned int __thiscall WaterFrameBuffer::CreateDepthBufferAttachment(int,int)" (?CreateDepthBufferAttachment@WaterFrameBuffer@@AAEIHH@Z)”中)导入
-LINK : warning LNK4217: 符号“___glewRenderbufferStorage”(在“ glew32s.lib(glew.obj)”中定义)已由“WaterFrameBuffer.obj”(函数“"private: unsigned int __thiscall WaterFrameBuffer::CreateDepthBufferAttachment(int,int)" (?CreateDepthBufferAttachment@WaterFrameBuffer@@AAEIHH@Z)”中)导入
-glew32s.lib(glew.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“glew32s.lib(glew.obj)”或在“C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-  MyOpenGLGame.vcxproj -> C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGL-FPSGame\MyOpenGL-FPSGame\Debug\MyOpenGLGame.exe
+C:\Users\Administrator\source\repos\MyOpenGLGame\MyOpenGLGame\Game.cpp(602,20): warning C4018: “<”: 有符号/无符号不匹配
+  MyOpenGLGame.vcxproj -> C:\Users\Administrator\source\repos\MyOpenGLGame\Debug\MyOpenGLGame.exe

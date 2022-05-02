@@ -6,13 +6,16 @@ Raytest::Raytest()
 	RayHit = false;
 }
 
-void Raytest::Update(Camera& camera, float dt, std::vector<Enermy*> enermies,int mod)
+void Raytest::Update(Camera& camera, float dt, std::vector<Enermy*> enermies,int mod, irrklang::ISoundEngine* SoundEngine)
 {
 	if (castRay) {
 		if (mod != 0) {
 			castRay = false;
 			PlayerRay = CastRayFromCamera(camera);
 			CheckRaySphereCollision(camera, enermies);
+			SoundEngine->setSoundVolume(1.5f);
+			SoundEngine->play2D("audio/solid.wav");
+			SoundEngine->setSoundVolume(0.5f);
 		}
 		else if (mod == 0) {
 			castRay = false;
