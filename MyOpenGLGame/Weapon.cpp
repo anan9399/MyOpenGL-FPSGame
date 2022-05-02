@@ -25,14 +25,14 @@ Weapon::Weapon(Player *player)
 	ZoffsetValue = 0.08f;
 }
 
-void Weapon::Upload(Camera camera, std::vector<Enermy*>enermies, Raytest * raytest,bool mouse_button,float dt)
+void Weapon::Upload(Camera camera, std::vector<Enermy*>enermies, irrklang::ISoundEngine* SoundEngine,Raytest * raytest,bool mouse_button,float dt)
 {
 	if (WeaponMod!= 0) {
 		//check whether player is reloading or switching
 		if (!reloading && !switching) {
 			if (atkDuration >= atkDurationMax && mouse_button) {
 				raytest->CastRay();
-				std::cout << "Remaining bullets " << amo << std::endl;
+				std::cout << "WeaponMod: " << WeaponMod << "  Remaining bullets " << amo << std::endl;
 				//check the amo
 				AmoCheck();
 			}
@@ -50,7 +50,9 @@ void Weapon::Upload(Camera camera, std::vector<Enermy*>enermies, Raytest * rayte
 	else if (atkDuration >= atkDurationMax && mouse_button) {
 		raytest->CastRay();
 	}
-	raytest->Update(camera, dt, enermies, WeaponMod);
+	raytest->Update(camera, dt, enermies, WeaponMod,SoundEngine);
+
+
 }
 
 void Weapon::AmoCheck()
@@ -67,13 +69,14 @@ bool Weapon::SwitchWeapon(Player *player,int mod,bool WeaponSwitching, float dt)
 	if (!WeaponSwitching) {
 		return false;
 	}
+
 	switching = true;
-	std::cout << "switching weapon" << std::endl;
+	//std::cout << "switching weapon" << std::endl;
 	if (reloading == false && SwitchDuration >= 1.0f ) {
 		switching = false;
 		SwitchDuration = 0.0f;
 		if (mod == 1) {
-			std::cout << WeaponMod << std::endl;
+
 			//different gun have its own amo data
 			//load the parent gun's amo data to anotherAmo
 			float maxA=10;
@@ -88,9 +91,11 @@ bool Weapon::SwitchWeapon(Player *player,int mod,bool WeaponSwitching, float dt)
 			totalReloadTime = 1.0f;
 			player->SetAtk(20.0f);
 			WeaponMod = mod;
+			std::cout << "success switching weapon" << WeaponMod << std::endl;
 			return false;
 		}
 		else if (mod == 2) {
+
 			float maxA =3;
 			if (WeaponMod == 1) {
 				maxA = amo;
@@ -103,9 +108,12 @@ bool Weapon::SwitchWeapon(Player *player,int mod,bool WeaponSwitching, float dt)
 			totalReloadTime = 1.3f;
 			player->SetAtk(100.0f);
 			WeaponMod = mod;
+			std::cout << "success switching weapon" << WeaponMod << std::endl;
 			return false;
 		}
 		else {
+			
+
 			//AnotherAmo = amo;
 			MaxAmo = 999;
 			atkDurationMax = 1.2f;
@@ -113,6 +121,7 @@ bool Weapon::SwitchWeapon(Player *player,int mod,bool WeaponSwitching, float dt)
 			totalReloadTime = 0;
 			player->SetAtk(1.0f);
 			WeaponMod = mod;
+			std::cout << "success switching weapon" << WeaponMod << std::endl;
 			return false;
 		}
 		
@@ -228,7 +237,7 @@ void Weapon::Reload(float dt)
 		return;
 	}
 	reloading = true;
-	std::cout << " reloading" << std::endl;
+	std::cout << " reloading can not shoot " << std::endl;
 	currentReloadTime += 0.4 * dt;
 
 	if (QuickReloadMod) {

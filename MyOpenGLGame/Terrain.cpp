@@ -157,7 +157,7 @@ void Terrain::Init()
 	texture_1 = Texture::GetInstance().loadTextureBySlot("soil01.jpg", GL_RGB, GL_RGB, 3);
 	texture_2 = Texture::GetInstance().loadTextureBySlot("soil02.jpg", GL_RGB, GL_RGB, 4);
 	texture_3 = Texture::GetInstance().loadTextureBySlot("soil03.jpg", GL_RGB, GL_RGB, 5);
-	blendmap = Texture::GetInstance().loadTextureBySlot("blendmap.png", GL_RGBA, GL_RGBA, 6);
+	blendmap = Texture::GetInstance().loadTextureBySlot("blendMap2.png", GL_RGBA, GL_RGBA, 6);
 	//std::cout << blendmap << " ";
 
 	object->InitObject(); 
@@ -244,11 +244,13 @@ Terrain::Terrain()
 }
 
 void Terrain::InitWater()
-
+//水面顶点数组及索引计算
 {
 
+	//pool.obj中的坐标轴与数学上的三维空间坐标轴不同，Y轴是在竖直方向，Z轴是在水平方向,为了与模型把持一致，我们以下的顶点数组中采用这种坐标系
+	//坐标范围是X轴(-3,3),Z轴(-3,3)
 	float valueX = 153;
-	float valueZ = 462;	
+	float valueZ = 462;	//以上两个参数是为了顶点数组从水池左上角开始计算水面顶点数组，这样比较符合日常直觉
 	int range = 60;
 	int size = 3;
 

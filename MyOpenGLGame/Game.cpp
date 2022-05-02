@@ -3,8 +3,6 @@
 #include"stb_image.h"
 #include<vector>
 
- 
-
 
 float quadVertices1[] = { // vertex attributes for a quad that fills the entire screen in Normalized Device Coordinates.
 	  // positions   // texCoords
@@ -59,8 +57,10 @@ std::vector<glm::vec3> enermyPos{
 	glm::vec3(234.508f, 35.8568f, 226.0f),
 	glm::vec3(547.2f,9.0f,264.4f),
 	glm::vec3(0)
-
+	//372.202 17.1994 453.991
+	//547.277 9 264.477
 };
+
 
 #pragma region Camera
 
@@ -140,8 +140,8 @@ void Game::processInput(GLFWwindow* window, float dt) {
 	}
 	if (glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS) {
 		//enermies[0]->beHit();
-		raytest->CastRay();
-	
+		//raytest->CastRay();
+		SoundEngine->play2D("audio/solid.wav");
 	}
 	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
 		/*if (player->GetAmo() != 0) {
@@ -278,6 +278,7 @@ void Game::run()
 
 void Game::Init()
 {
+
 #pragma region Init Screen FrameBuffer
 	screenShader = new Shader("ScreenVert.vert","ScreenFrag.frag");
 
@@ -329,12 +330,11 @@ void Game::Init()
 	 treeModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\tree\\tree.obj");
 	 stoneModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\Rock\\rock.obj");
 	 fbos = new WaterFrameBuffer();
-	 enermyModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\cube\\cube.obj");
+	 enermyModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\sphare\\rock.obj");
 	 enermyShader = new Shader("Modelvert.vert", "Modelfrag.frag");
 	 player = new Player();
 	 weapon = new Weapon(player);
 	 GunModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\cube\\cube.obj");
-
 	 gunShader = new Shader("Modelvert.vert", "Modelfrag.frag");
 
 	 weapon->IniteModel(GunModel);
@@ -365,7 +365,8 @@ void Game::Init()
 #pragma endregion
 	
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
-
+	SoundEngine->setSoundVolume(0.5);
+	SoundEngine->play2D("audio/breakout.mp3", GL_TRUE);
 }
 
 
@@ -441,7 +442,8 @@ void Game::Gameloop()
 		//std::cout << deltaTime << std::endl;
 
 		i++;
-		if (i == 800) {
+		
+		if (i == 1800) {
 			EnemyBorn(1);
 			i = 0;
 		}
@@ -470,7 +472,7 @@ void Game::Gameloop()
 
 		
 		//Render screen
-		//skybox->draw(camera);
+	    //skybox->draw(camera);
 		Terrain::GetInstance().draw(camera, lightD, lightS, FlashOn);
 		Terrain::GetInstance().DrawTree(camera, lightD, lightS, FlashOn, treeModel, treePosition, glm::vec3(0.05));
 		DrawEnermy(camera, lightD, lightS, FlashOn, enermies);
@@ -498,7 +500,10 @@ void Game::Gameloop()
 		//draw the Crosshair after the framebuffer when depth is off
 		object->DrawCrosshair();
 
-		
+
+	
+
+		//dead enemy check
 		for (auto i = enermies.begin(); i != enermies.end(); i++)
 		{
 			(*i)->Update(camera, lightD, lightS, FlashOn, player, deltaTime);
@@ -513,27 +518,30 @@ void Game::Gameloop()
 				break;
 			}
 		}
-		weapon->Upload(camera, enermies, raytest, mouse_button, deltaTime);
 	
+		weapon->Upload(camera, enermies, SoundEngine, raytest,mouse_button, deltaTime);
+
+
 		//hp <= 0 player lose
 		if (player->hp <= 0) {
 			object->DrawEnd(lose);
 		}
-	       // defeat 20 enems player win
+	   // defeat 20 enems player win
 		if (DeadEnermies.size()>=20) {
 			object->DrawEnd(win);
 		}
-		
+
 		//AttackUpdate(player);
 		processInput(window, deltaTime);
 		
 		glfwSwapBuffers(window);
 		glfwPollEvents();
-		lightS->UpdateLightSVector(camera);
+		lightS->UpdateLightSVector(camera); 
 		camera.UpdateCameraPos(nowy,deltaTime);
 		
+	
 		//std::cout << camera.Forward.x<< " " << camera.Forward.y <<  " " << camera.Forward.z <<  " " <<  std::endl;
-
+		//std::cout << camera.Position.x << " " << camera.Position.y << " " << camera.Position.z << " " << std::endl;
 	}
 
 	fbos->cleanUp();
@@ -602,14 +610,21 @@ void Game::DrawEnermy(Camera camera, LightDirectional* lightD, LightSpot* lightS
 		
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, enermys[i]->Position);
+	
 
 		//model = glm::rotate(model, enermys[i]->Angle, glm::vec3(0, 1.0f, 0));	
 		if (enermys[i]->alive == false) {
 			model = glm::translate(model, glm::vec3(0, -5.0f, 0));
-			model = glm::rotate(model, glm::radians(45.0f), glm::vec3(1.0f, 0, 0));
+			model = glm::rotate(model, glm::radians(45.0f), glm::vec3(1.0f, 0 ,0));
+			model = glm::scale(model, glm::vec3(0.9f));
+		}
+		else {
+			model = glm::rotate(model, glm::radians(90.0f), glm::vec3(1.0f, 0, 0));
+			model = glm::scale(model, glm::vec3(1.0f, 1.2f, 1.0f));
 		}
 
 		
+
 		enermyShader->setUniform4m("modelMat", model);
 		enermyModel->Draw(enermyShader);
 	}
@@ -635,6 +650,7 @@ void Game::AttackUpdate(Player* player)
 			if (player->atkDuration >= player->atkDurationMax && mouse_button) {
 					player->AmoCheck();
 					raytest->CastRay();
+					SoundEngine->play2D("audio/solid.wav");
 					std::cout << player->GetAmo() << std::endl;
 					//check the amo
 			}
@@ -650,7 +666,7 @@ void Game::AttackUpdate(Player* player)
 				raytest->CastRay();
 		}
 
-	raytest->Update(camera, deltaTime, enermies, player->GetWeapon());
+	//raytest->Update(camera, deltaTime, enermies, player->GetWeapon(), SoundEngine);
 }
 
 glm::vec3 generateNormal(glm::vec3 trianglePoint1, glm::vec3 trianglePoint2, glm::vec3 trianglePoint3)
