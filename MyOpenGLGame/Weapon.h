@@ -7,8 +7,9 @@ class Weapon
 {
 public:
 	Weapon(Player* player);
-	int GetWeapon() { return WeaponMod; };
-	float GetAmo() { return amo; };
+	int *GetWeapon() { return &WeaponMod; };
+	int *GetAmo() { return &amo; };
+	int GetMaxAmo() { return MaxAmo; };
 	void Upload(Camera camera, std::vector<Enermy*>enermies, irrklang::ISoundEngine* SoundEngine,Raytest* raytest, bool mouse_button, float dt);
 
 	void AmoCheck();
@@ -17,13 +18,13 @@ public:
 	void Reload(float dt);
 	void QuickReload(float dt);
 	void IniteModel(Model* gModel);
-
+	bool reloading, switching, runing;
 
 private:
 	Shader* m_shader;
 	Model* gunModel;
 	int VAO, VBO;
-	bool reloading, switching, runing;
+	
 	int WeaponMod;
 	int amo,MaxAmo,AnotherAmo;
 	float currentReloadTime, totalReloadTime;

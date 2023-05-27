@@ -10,7 +10,7 @@
 #include <vector>
 #include <stdio.h>
 #include <irrKlang.h>
-
+#include <memory>
 #include "LightDirectional.h"
 #include "LightSpot.h"
 #include "Shader.h"
@@ -38,7 +38,7 @@ public:
 	const int Screen_Height = 1200;
 	int time = glfwGetTime();
 	void run();
-	static float GetTerrainHeight(float x, float z);
+	//static float GetTerrainHeight(float x, float z);
 	void SetExePath(std::string path) {
 		this->exePath = path;
 	}
@@ -52,7 +52,7 @@ private:
 	void EnemyBorn(int n);
 	void DrawEnermy(Camera camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn, std::vector<Enermy*>enermys);
 	void AttackUpdate(Player *player);
-	void DrawGun(Camera camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn);
+	//void DrawGun(Camera camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn);
 	unsigned int quadVAO, quadVBO;
 	unsigned int framebuffer, textureColorbuffer, rbo;
 	int TotalEnermyNum, CurrentEnermyNum;

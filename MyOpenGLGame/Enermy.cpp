@@ -94,10 +94,11 @@ float Enermy::CalcDistanceNoHeight(glm::vec3& enemyPos, glm::vec3& playerPos)
 //Enemy status update
 void Enermy::Update(Camera camera, LightDirectional* lightD, LightSpot* lightS, int FlashOn,Player *player, const float dt)
 {
-	float distance = CalcDistance(this->Position, camera.Position);
+
 	Hurt = false;
 	//std::cout << distance << std::endl;
 	if (alive) {
+		float distance = CalcDistance(this->Position, camera.Position);
 		//if enemy is close enough to the player, begin to attack player
 		if (distance < AttackDistance && canAttack) {
 			Attack(player, dt, distance);

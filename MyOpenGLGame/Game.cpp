@@ -3,6 +3,9 @@
 #include"stb_image.h"
 #include<vector>
 
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_glfw.h"
+#include "imgui/imgui_impl_opengl3.h"
 
 float quadVertices1[] = { // vertex attributes for a quad that fills the entire screen in Normalized Device Coordinates.
 	  // positions   // texCoords
@@ -314,6 +317,23 @@ void Game::Init()
 
 #pragma endregion
 
+
+	// Setup Dear ImGui context
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+
+	// Setup Dear ImGui style
+	ImGui::StyleColorsDark();
+	//ImGui::StyleColorsClassic();
+
+	// Setup Platform/Renderer backends
+	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplOpenGL3_Init("#version 130");
+
+
 #pragma region Init light
 	lightD = new LightDirectional(glm::vec3(2.0f, 10.0f, 10.0f),
 		glm::vec3(glm::radians(60.0f),0, 0),
@@ -350,7 +370,7 @@ void Game::Init()
 	 }
 
 	 std::cout << enermies.size() << std::endl;
-	 EnemyBorn(3);
+	 EnemyBorn(4);
 
 #pragma endregion
 	
@@ -372,29 +392,6 @@ void Game::Init()
 
 
 glm::vec3 normalVector[VERTEX_COUNT * VERTEX_COUNT * 2];
-
-//float Game::GetTerrainHeight(float x, float z)
-//{
-//	float CameraX = x / SIZE;
-//	float CameraZ = z / SIZE;
-//	int Col0 = int(CameraX);
-//	int Row0 = int(CameraZ);
-//	int Col1 = Col0 + 1;
-//	int Row1 = Row0 + 1;
-//	if (Col1 > VERTEX_COUNT)	Col1 = 0;
-//	if (Row1 > VERTEX_COUNT)	Row1 = 0;
-//	float h00 = Vertices[Col0 + Row0 * VERTEX_COUNT].y;
-//	float h01 = Vertices[Col1 + Row0 * VERTEX_COUNT].y;
-//	float h11 = Vertices[Col1 + Row1 * VERTEX_COUNT].y;
-//	float h10 = Vertices[Col0 + Row1 * VERTEX_COUNT].y;
-//	float tx = CameraX - int(CameraX);
-//	float ty = CameraZ - int(CameraZ);
-//	float txty = tx * ty;
-//	return h00 * (1.0f - ty - tx + txty)
-//		+ h01 * (tx - txty)
-//		+ h11 * txty
-//		+ h10 * (ty - txty);
-//}
 
 int readNum(int* cursor, char str[VERTEX_COUNT * 3 + 10])
 {
@@ -430,6 +427,8 @@ int readNum(int* cursor, char str[VERTEX_COUNT * 3 + 10])
 void Game::Gameloop()
 {
 	int i = 0;
+	int DeadEneNum = 0;
+	bool showWindow = true;
 	while (!glfwWindowShouldClose(window)) {
 		// input
 	   // -----
@@ -441,10 +440,10 @@ void Game::Gameloop()
 
 		//std::cout << deltaTime << std::endl;
 
-		i++;
+		i += deltaTime;
 		
-		if (i == 1800) {
-			EnemyBorn(1);
+		if (i >= 1000) {
+			EnemyBorn(2);
 			i = 0;
 		}
 		
@@ -456,7 +455,7 @@ void Game::Gameloop()
 		//camera.Position.y -= distance;
 		//camera.inversePitch();
 		//DrawTerrain(glm::vec4(0, 1, 0, 1));
-		//skybox->draw(camera);
+		
 		//camera.Position.y += distance;
 		//camera.inversePitch();
 		//fbos->BindRefractionFrameBuffer();
@@ -472,7 +471,7 @@ void Game::Gameloop()
 
 		
 		//Render screen
-	    //skybox->draw(camera);
+	    skybox->draw(camera);
 		Terrain::GetInstance().draw(camera, lightD, lightS, FlashOn);
 		Terrain::GetInstance().DrawTree(camera, lightD, lightS, FlashOn, treeModel, treePosition, glm::vec3(0.05));
 		DrawEnermy(camera, lightD, lightS, FlashOn, enermies);
@@ -504,36 +503,70 @@ void Game::Gameloop()
 	
 
 		//dead enemy check
-		for (auto i = enermies.begin(); i != enermies.end(); i++)
+		for (auto i = enermies.begin(); i != enermies.end();)
 		{
 			(*i)->Update(camera, lightD, lightS, FlashOn, player, deltaTime);
 			if (!(*i)->alive) {
 				Enermy* enermy = new Enermy(false);
 				enermy->ActiveEnermy((*i)->Position);
-				DeadEnermies.push_back(enermy);
+				DeadEnermies.push_back(std::move(enermy));
 				i = enermies.erase(i);
+				DeadEneNum++;
 			}
-			if (i == enermies.end())
-			{
-				break;
+			else {
+				i++;
 			}
 		}
 	
 		weapon->Upload(camera, enermies, SoundEngine, raytest,mouse_button, deltaTime);
 
 
+	
+
+
+		// Start the Dear ImGui frame
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		if(showWindow){
+			ImVec2 WindowSize(300, 250);
+			ImGui::SetNextWindowBgAlpha(0.2f);
+			ImGui::Begin("Player");
+			ImGui::Text("HP");
+			ImGui::SliderFloat(" ", &player->hp, 0.0f, 100.0f);
+			ImGui::Text("Weapon Mode");
+			ImGui::SliderInt(" ",weapon->GetWeapon(),0,2);
+			ImGui::Text("Remaining bullets");
+			ImGui::SliderInt(" ", weapon->GetAmo(), 0, weapon->GetMaxAmo());
+			ImGui::Text("Press R to Reload");
+			ImGui::Checkbox("Reloading Cannot Shot", &weapon->reloading);
+
+			ImGui::Text("Killed Enermy Number");
+			ImGui::SliderInt(" ", &DeadEneNum, 0,20);
+			ImGui::SetWindowSize(WindowSize);
+
+			ImGui::End();
+		}
+
 		//hp <= 0 player lose
 		if (player->hp <= 0) {
 			object->DrawEnd(lose);
+			showWindow = false;
 		}
-	   // defeat 20 enems player win
-		if (DeadEnermies.size()>=20) {
+		// defeat 20 enems player win
+		if (DeadEnermies.size() >= 20) {
 			object->DrawEnd(win);
+			showWindow = false;
 		}
 
 		//AttackUpdate(player);
 		processInput(window, deltaTime);
 		
+		// Rendering
+		ImGui::Render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 		lightS->UpdateLightSVector(camera); 
@@ -543,6 +576,12 @@ void Game::Gameloop()
 		//std::cout << camera.Forward.x<< " " << camera.Forward.y <<  " " << camera.Forward.z <<  " " <<  std::endl;
 		//std::cout << camera.Position.x << " " << camera.Position.y << " " << camera.Position.z << " " << std::endl;
 	}
+
+
+	// Cleanup
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
 
 	fbos->cleanUp();
 	glfwTerminate();
@@ -615,6 +654,7 @@ void Game::DrawEnermy(Camera camera, LightDirectional* lightD, LightSpot* lightS
 		//model = glm::rotate(model, enermys[i]->Angle, glm::vec3(0, 1.0f, 0));	
 		if (enermys[i]->alive == false) {
 			model = glm::translate(model, glm::vec3(0, -5.0f, 0));
+			model = glm::rotate(model, glm::radians(45.0f), glm::vec3(1.0f, 0 ,0));
 			model = glm::rotate(model, glm::radians(45.0f), glm::vec3(1.0f, 0 ,0));
 			model = glm::scale(model, glm::vec3(0.9f));
 		}

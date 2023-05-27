@@ -154,10 +154,10 @@ void Terrain::Init()
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 
-	texture_1 = Texture::GetInstance().loadTextureBySlot("soil01.jpg", GL_RGB, GL_RGB, 3);
-	texture_2 = Texture::GetInstance().loadTextureBySlot("soil02.jpg", GL_RGB, GL_RGB, 4);
-	texture_3 = Texture::GetInstance().loadTextureBySlot("soil03.jpg", GL_RGB, GL_RGB, 5);
-	blendmap = Texture::GetInstance().loadTextureBySlot("blendMap2.png", GL_RGBA, GL_RGBA, 6);
+	texture_1 = Texture::GetInstance().loadTextureBySlot("texture/soil01.jpg", GL_RGB, GL_RGB, 3);
+	texture_2 = Texture::GetInstance().loadTextureBySlot("texture/soil02.jpg", GL_RGB, GL_RGB, 4);
+	texture_3 = Texture::GetInstance().loadTextureBySlot("texture/soil03.jpg", GL_RGB, GL_RGB, 5);
+	blendmap = Texture::GetInstance().loadTextureBySlot("texture/blendMap2.png", GL_RGBA, GL_RGBA, 6);
 	//std::cout << blendmap << " ";
 
 	object->InitObject(); 
@@ -244,13 +244,13 @@ Terrain::Terrain()
 }
 
 void Terrain::InitWater()
-//Ë®Ãæ¶¥µãÊı×é¼°Ë÷Òı¼ÆËã
+//Ë®Ãæ¶¥µãÊı×é¼°Ë÷Òı¼ÆËE
 {
 
-	//pool.objÖĞµÄ×ø±êÖáÓëÊıÑ§ÉÏµÄÈıÎ¬¿Õ¼ä×ø±êÖá²»Í¬£¬YÖáÊÇÔÚÊúÖ±·½Ïò£¬ZÖáÊÇÔÚË®Æ½·½Ïò,ÎªÁËÓëÄ£ĞÍ°Ñ³ÖÒ»ÖÂ£¬ÎÒÃÇÒÔÏÂµÄ¶¥µãÊı×éÖĞ²ÉÓÃÕâÖÖ×ø±êÏµ
-	//×ø±ê·¶Î§ÊÇXÖá(-3,3),ZÖá(-3,3)
+	//pool.objÖĞµÄ×ø±EáÓEıÑ§ÉÏµÄÈıÎ¬¿Õ¼ä×ø±Eá²»Í¬£¬YÖáÊÇÔÚÊúÖ±·½Ïò£¬ZÖáÊÇÔÚË®Æ½·½ÏEÎªÁËÓE£ĞÍ°Ñ³ÖÒ»ÖÂ£¬ÎÒÃÇÒÔÏÂµÄ¶¥µãÊı×éÖĞ²ÉÓÃÕâÖÖ×ø±Eµ
+	//×ø±E¶Î§ÊÇXÖE-3,3),ZÖE-3,3)
 	float valueX = 153;
-	float valueZ = 462;	//ÒÔÉÏÁ½¸ö²ÎÊıÊÇÎªÁË¶¥µãÊı×é´ÓË®³Ø×óÉÏ½Ç¿ªÊ¼¼ÆËãË®Ãæ¶¥µãÊı×é£¬ÕâÑù±È½Ï·ûºÏÈÕ³£Ö±¾õ
+	float valueZ = 462;	//ÒÔÉÏÁ½¸ö²ÎÊıÊÇÎªÁË¶¥µãÊı×é´ÓË®³Ø×óÉÏ½Ç¿ªÊ¼¼ÆËãË®Ãæ¶¥µãÊı×é£¬ÕâÑù±È½Ï·ûºÏÈÕ³£Ö±¾E
 	int range = 60;
 	int size = 3;
 
@@ -319,7 +319,7 @@ void Terrain::InitWater()
 	glBindVertexArray(0);
 
 	WaterShader = new Shader("WaterVert.vert", "WaterFrag.frag");
-	waterTex = Texture::GetInstance().loadTextureBySlot("water.png", GL_RGBA, GL_RGBA, 0);
+	waterTex = Texture::GetInstance().loadTextureBySlot("texture/water.png", GL_RGBA, GL_RGBA, 0);
 }
 
 void Terrain::InitStone(Model* stoneModel)

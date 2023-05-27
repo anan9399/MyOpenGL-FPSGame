@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\360安全浏览器下载\irrKlang-32bit-1.6.0\irrKlang-1.6.0\include;$(ProjectDir)\vender\glm-0.9.8.5\glm;$(ProjectDir)\vender\glfw-3.3.4.bin.WIN32\glfw-3.3.4.bin.WIN32\include;$(ProjectDir)\vender\glew-2.1.0-win32\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\vender\irrKlang-32bit-1.6.0\irrKlang-1.6.0\include;$(ProjectDir)\vender\glm-0.9.8.5\glm;$(ProjectDir)\vender\glfw-3.3.4.bin.WIN32\glfw-3.3.4.bin.WIN32\include;$(ProjectDir)\vender\glew-2.1.0-win32\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -106,7 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\360安全浏览器下载\irrKlang-32bit-1.6.0\irrKlang-1.6.0\include;$(ProjectDir)\vender\glm-0.9.8.5\glm;$(ProjectDir)\vender\glfw-3.3.4.bin.WIN32\glfw-3.3.4.bin.WIN32\include;$(ProjectDir)\vender\glew-2.1.0-win32\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\vender\irrKlang-32bit-1.6.0\irrKlang-1.6.0\include;$(ProjectDir)\vender\glm-0.9.8.5\glm;$(ProjectDir)\vender\glfw-3.3.4.bin.WIN32\glfw-3.3.4.bin.WIN32\include;$(ProjectDir)\vender\glew-2.1.0-win32\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,6 +158,13 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Enermy.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
     <ClCompile Include="LightDirectional.cpp" />
     <ClCompile Include="LightSpot.cpp" />
     <ClCompile Include="main.cpp" />
@@ -180,6 +187,14 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Enermy.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
     <ClInclude Include="LightDirectional.h" />
     <ClInclude Include="LightSpot.h" />
     <ClInclude Include="Mesh.h" />
@@ -222,25 +237,13 @@
     <None Include="WaterVert.vert" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="blendMap.png" />
-    <Image Include="container.jpg" />
-    <Image Include="container2.png" />
-    <Image Include="container2_specular.png" />
-    <Image Include="crossHair.png" />
-    <Image Include="grass.png" />
-    <Image Include="lose.png" />
-    <Image Include="rock.jpg" />
     <Image Include="skybox\back.jpg" />
     <Image Include="skybox\bottom.jpg" />
     <Image Include="skybox\front.jpg" />
     <Image Include="skybox\left.jpg" />
     <Image Include="skybox\right.jpg" />
     <Image Include="skybox\top.jpg" />
-    <Image Include="soil01.jpg" />
-    <Image Include="soil02.jpg" />
-    <Image Include="soil03.jpg" />
-    <Image Include="Terrain.BMP" />
-    <Image Include="wins.png" />
+    <Image Include="texture\water.png" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MyOpenGLGame.rc" />

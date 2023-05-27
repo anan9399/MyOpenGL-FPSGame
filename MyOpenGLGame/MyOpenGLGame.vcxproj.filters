@@ -16,6 +16,9 @@
     <Filter Include="资源文件\skybox">
       <UniqueIdentifier>{2d204cec-9442-41bc-9fdd-4fe653747490}</UniqueIdentifier>
     </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{5b5f1f7d-65de-4ff9-af2d-bc0f14347c72}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -77,6 +80,27 @@
     </ClCompile>
     <ClCompile Include="Weapon.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_glfw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_opengl3.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +166,30 @@
     </ClInclude>
     <ClInclude Include="Weapon.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_glfw.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_opengl3.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -225,43 +273,7 @@
     <Image Include="skybox\top.jpg">
       <Filter>资源文件\skybox</Filter>
     </Image>
-    <Image Include="container2.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="container2_specular.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="container.jpg">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="rock.jpg">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="soil03.jpg">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="soil01.jpg">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="soil02.jpg">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="blendMap.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="Terrain.BMP">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="grass.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="crossHair.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="lose.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="wins.png">
+    <Image Include="texture\water.png">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

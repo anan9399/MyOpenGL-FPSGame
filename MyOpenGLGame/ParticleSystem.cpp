@@ -48,7 +48,7 @@ void ParticleSystem::init(int numOfParticles)
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 
-	P_texture = Texture::GetInstance().loadTextureBySlot("redOrb.png", GL_RGBA, GL_RGBA, 0);
+	P_texture = Texture::GetInstance().loadTextureBySlot("texture/RedOrb.png", GL_RGBA, GL_RGBA, 0);
 }
 
 void ParticleSystem::update(float dt)

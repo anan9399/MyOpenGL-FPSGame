@@ -133,10 +133,10 @@ void Object::InitObject()
 	glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(3);
 
-	diffuse = Texture::GetInstance().loadTextureBySlot("container2.png", GL_RGBA, GL_RGBA, 0);
+	diffuse = Texture::GetInstance().loadTextureBySlot("texture/container2.png", GL_RGBA, GL_RGBA, 0);
 
 
-	specular = Texture::GetInstance().loadTextureBySlot("container2_specular.png", GL_RGBA, GL_RGBA, 1);
+	specular = Texture::GetInstance().loadTextureBySlot("texture/container2_specular.png", GL_RGBA, GL_RGBA, 1);
 	//std::cout << specular << std::endl;
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -165,7 +165,7 @@ void Object::InitObject()
 	glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(3);
 
-	waterTex = Texture::GetInstance().loadTextureBySlot("water.png", GL_RGBA, GL_RGBA, 0);
+	waterTex = Texture::GetInstance().loadTextureBySlot("texture/water.png", GL_RGBA, GL_RGBA, 0);
 
 
 
@@ -184,7 +184,7 @@ void Object::InitObject()
 	glEnableVertexAttribArray(1);
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
 
-	AimTex = Texture::GetInstance().loadTextureBySlot("crossHair.png", GL_RGBA, GL_RGBA, 0);
+	AimTex = Texture::GetInstance().loadTextureBySlot("texture/crossHair.png", GL_RGBA, GL_RGBA, 0);
 
 #pragma endregion
 
@@ -201,8 +201,8 @@ void Object::InitObject()
 	glEnableVertexAttribArray(1);
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
 
-	winTex = Texture::GetInstance().loadTextureBySlot("wins.png", GL_RGBA, GL_RGBA, 0);
-	loseTex = Texture::GetInstance().loadTextureBySlot("lose.png", GL_RGBA, GL_RGBA, 0);
+	winTex = Texture::GetInstance().loadTextureBySlot("texture/wins.png", GL_RGBA, GL_RGBA, 0);
+	loseTex = Texture::GetInstance().loadTextureBySlot("texture/lose.png", GL_RGBA, GL_RGBA, 0);
 
 #pragma endregion
 
@@ -292,7 +292,7 @@ void Object::InitGrass(std::vector<glm::vec3> GrassPos)
 
 	glBindVertexArray(0);
 
-	plantTex = Texture::GetInstance().loadTextureBySlot("grass.png", GL_RGBA, GL_RGBA, 0);
+	plantTex = Texture::GetInstance().loadTextureBySlot("texture/grass.png", GL_RGBA, GL_RGBA, 0);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 

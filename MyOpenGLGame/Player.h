@@ -4,6 +4,7 @@ class Player
 {
 public:
 	Player();
+	~Player() = default;
 	float hp;
 	float atk;
 	float atkDuration,atkDurationMax;
