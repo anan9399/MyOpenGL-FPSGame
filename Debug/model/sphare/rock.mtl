@@ -1,0 +1,13 @@
+# Blender MTL File: 'Rock1.blend'
+# Material Count: 1
+
+newmtl Material
+Ns 13.725490
+Ka 1.000 1.000 1.000
+ Kd 1.000 1.000 1.000
+ Ks 0.000 0.000 0.000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump file9.png
+map_Kd file9.png
