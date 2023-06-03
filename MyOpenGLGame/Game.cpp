@@ -347,14 +347,14 @@ void Game::Init()
 #pragma region Init 
 	 skybox = new Skybox();
 	 object = new Object();
-	 treeModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\tree\\tree.obj");
-	 stoneModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\Rock\\rock.obj");
+	 treeModel = new Model("model\\tree\\tree.obj");
+	 stoneModel = new Model("model\\Rock\\rock.obj");
 	 fbos = new WaterFrameBuffer();
-	 enermyModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\sphare\\rock.obj");
+	 enermyModel = new Model("model\\sphare\\rock.obj");
 	 enermyShader = new Shader("Modelvert.vert", "Modelfrag.frag");
 	 player = new Player();
 	 weapon = new Weapon(player);
-	 GunModel = new Model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\cube\\cube.obj");
+	 GunModel = new Model("model\\cube\\cube.obj");
 	 gunShader = new Shader("Modelvert.vert", "Modelfrag.frag");
 
 	 weapon->IniteModel(GunModel);
